@@ -1,7 +1,7 @@
 .. module:: cmastro
 
 **********************************
-`cmastro`: colormaps for astronomy
+`cmastro`: colormaps for astronomers
 **********************************
 
 This package contains custom colormaps that have been used in various
