@@ -48,4 +48,3 @@ cmaps['cma:unph_r'] = ListedColormap(colors[::-1],
 
 for cmap in cmaps.values():
     cm.register_cmap(cmap=cmap)
-
