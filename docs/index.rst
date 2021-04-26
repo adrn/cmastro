@@ -4,9 +4,17 @@
 `cmastro`: colormaps for astronomy
 **********************************
 
+This package contains custom colormaps that have been used in various
+astronomical applications, analogous to `cmocean for oceanography
+<https://matplotlib.org/cmocean/>`_. The colormaps are available as raw data
+files through the `GitHub source repository
+<https://github.com/adrn/cmastro/tree/main/cmastro/cmaps>`_, or available to use
+(through this Python package) as `matplotlib colormaps
+<https://matplotlib.org/stable/tutorials/colors/colormaps.html>`_.
 
-The Colormaps
-=============
+
+Meet the colormaps
+==================
 
 .. plot::
     :align: center
@@ -15,16 +23,6 @@ The Colormaps
 
     from cmastro.plot import plot_all_colormaps
     fig, _ = plot_all_colormaps()
-
-    fig, _ = plot_all_colormaps(grayscale=True)
-
-
-.. plot::
-    :align: center
-    :context: close-figs
-
-    from cmastro.plot import plot_lightness
-    fig, _ = plot_lightness()
 
 
 Installation
@@ -47,3 +45,24 @@ We welcome new contributed colormaps from anyone via pull requests on `GitHub
 <https://github.com/adrn/cmastro>`_. If you don't feel comfortable modifying or
 adding functionality, we also welcome feature requests and bug reports as
 `GitHub issues <https://github.com/adrn/cmastro/issues>`_.
+
+
+The colormaps in detail
+=======================
+
+TODO:
+
+.. plot::
+    :align: center
+    :context: close-figs
+    :width: 65%
+
+    from cmastro.plot import plot_all_colormaps
+    fig, _ = plot_all_colormaps(grayscale=True)
+
+.. plot::
+    :align: center
+    :context: close-figs
+
+    from cmastro.plot import plot_lightness
+    fig, _ = plot_lightness()
