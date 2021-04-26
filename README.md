@@ -1,0 +1,2 @@
+# cmastro
+Colormaps for astronomy
