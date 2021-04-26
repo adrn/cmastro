@@ -42,6 +42,13 @@ default_role = 'obj'
 # the __init__ docstring
 autoclass_content = "both"
 
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'numpydoc',
+    'matplotlib.sphinxext.plot_directive'
+]
+
 # intersphinx
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
