@@ -1,2 +1,3 @@
-# cmastro
-Colormaps for astronomy
+# cmastro: Colormaps for Astronomers
+
+Sup.
