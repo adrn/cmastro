@@ -2,7 +2,7 @@
 `cmastro`: colormaps for astronomers 🔭
 **************************************
 
-|PyPI| |Documentation Status|
+|Documentation Status|
 
 This package contains custom colormaps that have been used in various
 astronomical applications, similar to `cmocean for oceanography
@@ -16,6 +16,8 @@ files through the `GitHub source repository
 Installation
 ============
 
+|PyPI|
+
 `cmastro` is available via `pip`, which is the recommended installation method.
 To install the latest stable version using `pip`, use::
 
@@ -27,7 +29,7 @@ To install the latest development version::
 
 
 License
--------
+=======
 
 |License|
 
