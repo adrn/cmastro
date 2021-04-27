@@ -21,8 +21,9 @@ Meet the colormaps
     :context: close-figs
     :width: 65%
 
+    from cmastro import cmaps
     from cmastro.plot import plot_all_colormaps
-    fig, _ = plot_all_colormaps()
+    fig, _ = plot_all_colormaps(cmaps)
 
 
 Installation
@@ -58,11 +59,11 @@ TODO:
     :width: 65%
 
     from cmastro.plot import plot_all_colormaps
-    fig, _ = plot_all_colormaps(grayscale=True)
+    fig, _ = plot_all_colormaps(cmaps, grayscale=True)
 
 .. plot::
     :align: center
     :context: close-figs
 
     from cmastro.plot import plot_lightness
-    fig, _ = plot_lightness()
+    fig, _ = plot_lightness(cmaps)
