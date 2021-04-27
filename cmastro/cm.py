@@ -13,7 +13,7 @@ data_path = pathlib.Path(__file__).resolve().parent / 'cmaps'
 cmap_files = data_path.glob('[!.]*')
 
 cmaps = dict()
-for cmap_file in cmap_files:
+for cmap_file in sorted(cmap_files, key=lambda x: x.stem):
     kw = dict()
     if cmap_file.suffix == '.csv':
         kw['delimiter'] = ','
@@ -30,21 +30,30 @@ for cmap_file in cmap_files:
 #
 
 # emph and unph (formerly center_emph and center_deemph)
-trim = 64
-warm = cmaps['cma:hesperia'].colors[::-1][:256 - trim]
-cool = cmaps['cma:laguna'].colors[trim + 1:]
-colors = np.concatenate((warm,
-                         [0.5 * (warm[-1] + cool[0])],
-                         cool))
+warm = cmaps['cma:hesperia'].colors
+cool = cmaps['cma:laguna'].colors
+
+dark_trim = 50  # don't go all the way to black
+light_trim = 12  # don't go all the way to white
+
+this_warm = warm[dark_trim:-light_trim]
+this_cool = cool[dark_trim:-light_trim]
+
+colors = np.concatenate((this_warm[::-1],
+                         [0.5 * (this_warm[0] + this_cool[0])],
+                         this_cool))
 cmaps['cma:emph'] = ListedColormap(colors, name="cma:emph")
 cmaps['cma:emph_r'] = ListedColormap(colors[::-1], name="cma:emph_r")
 
-colors = np.concatenate((cmaps['cma:hesperia'].colors[:-1][trim:],
-                         cmaps['cma:laguna'].colors[::-1][:256-trim]))
+colors = np.concatenate((this_warm,
+                         [0.5 * (this_warm[-1] + this_cool[-1])],
+                         this_cool[::-1]))
 cmaps['cma:unph'] = ListedColormap(colors, name="cma:unph")
 cmaps['cma:unph_r'] = ListedColormap(colors[::-1],
                                      name="cma:unph_r")
 
+assert len(this_warm) == len(this_cool)
+assert np.allclose(cmaps['cma:emph'](0.5), cmaps['cma:emph_r'](0.5))
 
 for cmap in cmaps.values():
     cm.register_cmap(cmap=cmap)
