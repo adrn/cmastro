@@ -2,6 +2,8 @@
 `cmastro`: colormaps for astronomers 🔭
 **************************************
 
+|PyPI| |Documentation Status|
+
 This package contains custom colormaps that have been used in various
 astronomical applications, similar to `cmocean for oceanography
 <https://matplotlib.org/cmocean/>`_. The colormaps are available as raw data
@@ -23,3 +25,22 @@ To install the latest development version::
 
     python -m pip install git+https://github.com/adrn/cmastro
 
+
+License
+-------
+
+|License|
+
+``cmastro`` is free software made available under the MIT License. For details
+see the `LICENSE <https://github.com/adrn/gala/blob/main/LICENSE>`_ file.
+Copyright 2021 the contributors.
+
+.. .. |Build status| image:: https://github.com/adrn/gala/workflows/nix-tests/badge.svg?branch=main
+..    :target: https://github.com/adrn/gala/actions?query=workflow%3Anix-tests
+
+.. |License| image:: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+   :target: https://github.com/adrn/cmastro/blob/main/LICENSE
+.. |PyPI| image:: https://badge.fury.io/py/cmastro.svg
+   :target: https://badge.fury.io/py/cmastro
+.. |Documentation Status| image:: https://readthedocs.org/projects/cmastro/badge/?version=latest
+   :target: http://cmastro.readthedocs.io/
