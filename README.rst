@@ -1,6 +1,6 @@
-**********************************
-`cmastro`: colormaps for astronomers
-**********************************
+**************************************
+`cmastro`: colormaps for astronomers 🔭
+**************************************
 
 This package contains custom colormaps that have been used in various
 astronomical applications, similar to `cmocean for oceanography
