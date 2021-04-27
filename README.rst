@@ -12,6 +12,12 @@ files through the `GitHub source repository
 (through this Python package) as `matplotlib colormaps
 <https://matplotlib.org/stable/tutorials/colors/colormaps.html>`_.
 
+.. raw:: html
+
+    <a href="https://cmastro.readthedocs.io">
+       <img src="https://cmastro.readthedocs.io/en/latest/_images/index-1.png" width="75%" />
+    </a>
+
 
 Installation
 ============
