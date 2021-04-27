@@ -1,8 +1,8 @@
 .. module:: cmastro
 
-**********************************
+************************************
 `cmastro`: colormaps for astronomers
-**********************************
+************************************
 
 This package contains custom colormaps that have been used in various
 astronomical applications, similar to `cmocean for oceanography
@@ -16,10 +16,12 @@ files through the `GitHub source repository
 Meet the colormaps
 ==================
 
+.. TODO: like matplotlib, split into sequential, diverging, cyclic?
+
 .. plot::
     :align: center
     :context: close-figs
-    :width: 65%
+    :width: 90%
 
     from cmastro import cmaps
     from cmastro.plot import plot_all_colormaps
@@ -56,7 +58,7 @@ TODO:
 .. plot::
     :align: center
     :context: close-figs
-    :width: 65%
+    :width: 90%
 
     from cmastro.plot import plot_all_colormaps
     fig, _ = plot_all_colormaps(cmaps, grayscale=True)
@@ -64,6 +66,7 @@ TODO:
 .. plot::
     :align: center
     :context: close-figs
+    :width: 90%
 
     from cmastro.plot import plot_lightness
     fig, _ = plot_lightness(cmaps)

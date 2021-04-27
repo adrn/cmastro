@@ -11,7 +11,7 @@ def plot_all_colormaps(cmaps, grayscale=False):
     cmap_names = [name for name in cmaps if not name.endswith('_r')]
     nrows = len(cmap_names)
 
-    fig, axes = plt.subplots(nrows, 1, figsize=(10, 2*nrows),
+    fig, axes = plt.subplots(nrows, 1, figsize=(10, 1*nrows),
                              constrained_layout=True)
 
     # Turn off ticks & spines
@@ -34,7 +34,7 @@ def plot_all_colormaps(cmaps, grayscale=False):
         else:
             H = rgb[None]
 
-        ax.imshow(H, aspect=40)
+        ax.imshow(H, aspect=20)
         ax.set_ylabel(name, ha='right', va='center', rotation=0)
 
     return fig, axes
@@ -47,13 +47,14 @@ def plot_lightness(cmaps):
     grid = np.linspace(0, 1, 256)
 
     cmap_names = [name for name in cmaps if not name.endswith('_r')]
-    nrows = len(cmap_names)
 
-    fig, axes = plt.subplots(1, nrows, figsize=(4*nrows, 4),
+    nrows = int(np.ceil(len(cmap_names) / 3))
+    fig, axes = plt.subplots(nrows, 3,
+                             figsize=(9, 3*nrows),
                              sharex=True, sharey=True,
                              constrained_layout=True)
 
-    for ax, name in zip(axes, cmap_names):
+    for i, (ax, name) in enumerate(zip(axes.flat, cmap_names)):
         cmap = cmaps[name]
         rgb = cmap(grid)[:, :3]
 
@@ -64,8 +65,14 @@ def plot_lightness(cmaps):
         ax.set_title(name)
         ax.xaxis.set_ticks([])
 
-    axes[0].set_ylabel('lightness')
     ax.set_ylim(0, 1)
+
+    for j in range(i+1, len(axes.flat)):
+        ax = axes.flat[j]
+        ax.set_visible(False)
+
+    for ax in axes[:, 0]:
+        ax.set_ylabel('lightness')
 
     return fig, axes
 

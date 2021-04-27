@@ -98,7 +98,8 @@ html_theme_options = {
 
 plot_apply_rcparams = True
 plot_rcparams = mpl_style = {
-    # Font
+    'font.size': 16,
+
     'figure.titlesize': 'x-large',
 
     # Axes
