@@ -1,6 +1,6 @@
-**************************************
+***************************************
 `cmastro`: colormaps for astronomers 🔭
-**************************************
+***************************************
 
 |Documentation Status|
 
@@ -12,11 +12,7 @@ files through the `GitHub source repository
 (through this Python package) as `matplotlib colormaps
 <https://matplotlib.org/stable/tutorials/colors/colormaps.html>`_.
 
-.. raw:: html
-
-    <a href="https://cmastro.readthedocs.io">
-       <img src="https://cmastro.readthedocs.io/en/latest/_images/index-1.png" width="75%" />
-    </a>
+|cmaps|
 
 
 Installation
@@ -46,6 +42,8 @@ Copyright 2021 the contributors.
 .. .. |Build status| image:: https://github.com/adrn/gala/workflows/nix-tests/badge.svg?branch=main
 ..    :target: https://github.com/adrn/gala/actions?query=workflow%3Anix-tests
 
+.. |cmaps| image:: https://cmastro.readthedocs.io/en/latest/_images/index-1.png
+   :target: https://cmastro.readthedocs.io
 .. |License| image:: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
    :target: https://github.com/adrn/cmastro/blob/main/LICENSE
 .. |PyPI| image:: https://badge.fury.io/py/cmastro.svg
