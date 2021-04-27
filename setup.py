@@ -6,9 +6,8 @@ import os
 from setuptools import setup
 
 VERSION_TEMPLATE = """
-# Note that we need to fall back to the hard-coded version if either
-# setuptools_scm can't be imported or setuptools_scm can't determine the
-# version, so we catch the generic 'Exception'.
+# Fall back to the hard-coded version if either setuptools_scm can't be
+# imported or setuptools_scm can't determine the version
 try:
     from setuptools_scm import get_version
     version = get_version(root='..', relative_to=__file__)
