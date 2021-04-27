@@ -95,3 +95,20 @@ html_theme_options = {
 # html_css_files = [
 #     "cmastro.css"
 # ]
+
+plot_apply_rcparams = True
+plot_rcparams = mpl_style = {
+    # Font
+    'figure.titlesize': 'x-large',
+
+    # Axes
+    'axes.titlesize': 'large',
+    'axes.labelsize': 'large',
+    'axes.axisbelow': True,
+
+    'xtick.labelsize': 'medium',
+    'ytick.labelsize': 'medium',
+
+    'figure.dpi': 300,
+    'savefig.dpi': 300,
+}
