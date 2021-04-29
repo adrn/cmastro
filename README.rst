@@ -14,6 +14,11 @@ files through the `GitHub source repository
 
 |cmaps|
 
+Also check out these other awesome colormap or color palette projects:
+
+* `cmasher <https://cmasher.readthedocs.io/>`_
+* `colorcet <https://colorcet.holoviz.org/>`_
+* `palettable <https://jiffyclub.github.io/palettable/>`_
 
 Installation
 ============
