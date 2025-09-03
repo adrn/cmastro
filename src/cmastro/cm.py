@@ -1,7 +1,19 @@
-# Standard library
+__all__ = [
+    "cmaps",
+    "hesperia",
+    "laguna",
+    "lacerta",
+    "emph",
+    "unph",
+    "hesperia_r",
+    "laguna_r",
+    "lacerta_r",
+    "emph_r",
+    "unph_r",
+]
+
 import pathlib
 
-# Third-party
 import matplotlib as mpl
 import numpy as np
 from matplotlib.colors import ListedColormap
@@ -54,3 +66,15 @@ assert np.allclose(cmaps["cma:emph"](0.5), cmaps["cma:emph_r"](0.5))
 
 for cmap in cmaps.values():
     mpl.colormaps.register(cmap=cmap)
+
+hesperia = cmaps["cma:hesperia"]
+laguna = cmaps["cma:laguna"]
+lacerta = cmaps["cma:lacerta"]
+emph = cmaps["cma:emph"]
+unph = cmaps["cma:unph"]
+
+hesperia_r = cmaps["cma:hesperia_r"]
+laguna_r = cmaps["cma:laguna_r"]
+lacerta_r = cmaps["cma:lacerta_r"]
+emph_r = cmaps["cma:emph_r"]
+unph_r = cmaps["cma:unph_r"]
