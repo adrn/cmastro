@@ -33,7 +33,7 @@ jobs:
   test-publish:
     needs: [dist]
     name: Test Publish to TestPyPI
-    environment: pypi
+    environment: testpypi
     permissions:
       id-token: write
     runs-on: ubuntu-latest
@@ -56,7 +56,7 @@ jobs:
   publish:
     needs: [dist]
     name: Publish to PyPI
-    environment: pypi
+    environment: release
     permissions:
       id-token: write
     runs-on: ubuntu-latest
