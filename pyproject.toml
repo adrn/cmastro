@@ -27,3 +27,4 @@ docs = [
     "numpydoc",
     "colorspacious"
 ]
+dev = ["cmastro[test, docs]"]
