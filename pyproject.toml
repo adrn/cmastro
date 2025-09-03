@@ -1,5 +1,29 @@
+[project]
+name = "cmastro"
+description = "Colormaps for astronomers"
+readme = "README.rst"
+requires-python = ">=3.11"
+authors = [ { name = "adrn" } ]
+license = { file = "LICENSE" }
+dependencies = [
+    "matplotlib",
+    "numpy",
+]
+dynamic = ["version"]
+
 [build-system]
-requires = ["setuptools",
-            "setuptools_scm",
-            "wheel"]
-build-backend = 'setuptools.build_meta'
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "src/cmastro/version.py"
+
+[project.optional-dependencies]
+test = ["pytest"]
+docs = [
+    "pydata_sphinx_theme",
+    "sphinx_automodapi",
+    "numpydoc",
+    "colorspacious"
+]

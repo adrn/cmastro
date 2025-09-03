@@ -42,7 +42,7 @@ License
 
 ``cmastro`` is free software made available under the MIT License. For details
 see the `LICENSE <https://github.com/adrn/gala/blob/main/LICENSE>`_ file.
-Copyright 2021 the contributors.
+Copyright 2021-2025 the contributors.
 
 .. .. |Build status| image:: https://github.com/adrn/gala/workflows/nix-tests/badge.svg?branch=main
 ..    :target: https://github.com/adrn/gala/actions?query=workflow%3Anix-tests
