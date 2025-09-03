@@ -18,6 +18,9 @@ build-backend = "hatchling.build"
 [tool.hatch]
 version.source = "vcs"
 build.hooks.vcs.version-file = "src/cmastro/version.py"
+build.include = [
+    "src/cmastro/cmaps/*.csv"
+]
 
 [project.optional-dependencies]
 test = ["pytest"]
